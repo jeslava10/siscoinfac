@@ -20,16 +20,12 @@ class CreateEmpleadosTable extends Migration
             $table->string('nombres');
             $table->string('apellidos');
             $table->date('fechaDeIngreso');
-            $table->string('cargo ');
+            $table->string('cargo');
             $table->decimal('salario',8,2);
             $table->enum('horario',['Jornada Diurna','Jornada Noturna','Jornada Completa']);
             $table->boolean('activo');
-            $table->timestamp('fechaCreacion');
-            $table->string('usuarioCreacion');
-            $table->timestamp('fechaModificacion');
-            $table->string('usuarioModificacion');
+            $table->timestamps();
 
-            $table->primary('id');
             $table->unique('numeroDocumento');
 
 

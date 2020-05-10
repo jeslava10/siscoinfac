@@ -19,8 +19,9 @@ class CreateUsuariosTable extends Migration
             $table->String('correo')->nullable(false);
             $table->string('contrasena',60)->nullable(false);
             $table->enum('rol',['Administrador','Empleado']);
-            $table->primary('id');
+     
             $table->unique('correo');
+            $table->timestamps();
 
         });
     }
